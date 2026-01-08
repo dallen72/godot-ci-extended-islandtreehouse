@@ -13,9 +13,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN mkdir -v -p ~/.local/share/godot/export_templates/ \
     && mkdir -v -p ~/.config/ \
-    && mkdir -v -p /github/home/.local/share/godot/export_templates/ \
-    && mkdir -v -p /github/home/.config/ \
-    && mv /root/.config/godot ~/.config/godot 2>/dev/null || true \
-    && mv /root/.local/share/godot/export_templates/4.5.stable ~/.local/share/godot/export_templates/4.5.stable 2>/dev/null || true \
-    && cp -r ~/.local/share/godot/export_templates/4.5.stable /github/home/.local/share/godot/export_templates/4.5.stable 2>/dev/null || true \
-    && cp -r ~/.config/godot /github/home/.config/godot 2>/dev/null || true
+    && mv /root/.config/godot ~/.config/godot \
+    && mv /root/.local/share/godot/export_templates/4.5.stable ~/.local/share/godot/export_templates/4.5.stable
